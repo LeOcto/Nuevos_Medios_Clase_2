@@ -6,6 +6,19 @@ if (document.body.classList.contains("portada")) {
 } else {
     dondeEstas = false;
 }
+
+if (document.body.classList.contains("dibujo")) {
+  dibujo = true;
+} else {
+  dibujo = false;
+}
+
+if (document.body.classList.contains("pag")) {
+  pag = true;
+} else {
+  pag = false;
+}
+
 var elSaludo;
 if (5 < laHora && laHora < 12) {
     elSaludo = "Good morning";
@@ -21,13 +34,17 @@ function setup() {
     createElement("h1", elSaludo).parent(elEncabezado).id("title");
     createA("index.html", "index").parent("vinculos");
     createA("page.html", "page").parent("vinculos");
-    createA("dibujo.html", "drawing").parent("vinculos");
+    createA("dibujo.html", "dibujo").parent("vinculos");
     elColor = createColorPicker("#555555").parent("controles");
     elSlider = createSlider(1, 5, 3).parent("controles");
     if (dondeEstas) {
         portada();
-    } else {
+    }
+    if (pag) {
         pagina();
+      }
+    if (dibujo) {
+        drawing();
     }
 }
 function draw() {
@@ -44,4 +61,8 @@ function portada() {
 function pagina() {
     createSpan(". You find yourself in: page.html").parent("title");
     select("a:nth-child(2)").style("font-weight", "bold").style("color", "#50055E");
+}
+function drawing() {
+    createSpan(". I made something myself:").parent("title");
+    select("a:nth-child(3)").style("font-weight", "bold").style("color", "#50055E");
 }
