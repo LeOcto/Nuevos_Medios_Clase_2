@@ -66,3 +66,4 @@ function drawing() {
     createSpan(". I made something myself:").parent("title");
     select("a:nth-child(3)").style("font-weight", "bold").style("color", "#50055E");
 }
+
