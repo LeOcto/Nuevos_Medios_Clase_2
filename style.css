@@ -75,3 +75,12 @@ footer div#controles input[type=range]{
     width:4rem;
     margin:0 0.5rem;
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+}
+
