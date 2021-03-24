@@ -21,7 +21,7 @@ function setup() {
     createElement("h1", elSaludo).parent(elEncabezado).id("title");
     createA("index.html", "index").parent("vinculos");
     createA("page.html", "page").parent("vinculos");
-    createA("dibujo.html", "dibujo").parent("vinculos");
+    createA("dibujo.html", "drawing").parent("vinculos");
     elColor = createColorPicker("#555555").parent("controles");
     elSlider = createSlider(1, 5, 3).parent("controles");
     if (dondeEstas) {
