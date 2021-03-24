@@ -7,16 +7,16 @@ if (document.body.classList.contains("portada")) {
     dondeEstas = false;
 }
 
+if (document.body.classList.contains("pag")) {
+  pagin = true;
+} else {
+  pagin = false;
+}
+
 if (document.body.classList.contains("dibujo")) {
   dibujo = true;
 } else {
   dibujo = false;
-}
-
-if (document.body.classList.contains("pag")) {
-  pag = true;
-} else {
-  pag = false;
 }
 
 var elSaludo;
@@ -37,12 +37,15 @@ function setup() {
     createA("dibujo.html", "dibujo").parent("vinculos");
     elColor = createColorPicker("#555555").parent("controles");
     elSlider = createSlider(1, 5, 3).parent("controles");
+   
     if (dondeEstas) {
         portada();
     }
-    if (pag) {
+   
+    if (pagin) {
         pagina();
       }
+   
     if (dibujo) {
         drawing();
     }
